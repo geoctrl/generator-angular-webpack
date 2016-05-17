@@ -1,0 +1,18 @@
+{
+  "name": "<%= appName %>",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "mock-api": "nodemon dev-server/server.js --watch dev-server",
+    "start": "NODE_ENV=development webpack-dev-server --history-api-fallback --content-base app --inline --hot",
+    "build": "NODE_ENV=production webpack",
+    "deploy": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "<%= bitbucketUrl %>"
+  },
+  "author": "",
+  "license": "copyright"
+}

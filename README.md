@@ -1,2 +1,2 @@
-# generator-angular-webpack
-Yeoman generator for angular1.5/webpack
+# Generator Angular Webpack
+Yeoman generator for angular 1.5 / webpack
