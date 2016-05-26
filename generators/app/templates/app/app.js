@@ -1,10 +1,14 @@
 // require app styles
-require('./sass/main.scss');
+import './sass/main.scss';
 
 // require vendor dependencies
-let angular = require('angular');
-require('angular-local-storage');
-require('angular-ui-router');
+import angular from 'angular';
+import 'angular-local-storage';
+import 'angular-ui-router';
+
+// polyfill the Promise global
+import promise from 'es6-promise';
+promise.polyfill();
 
 var app = angular.module('<%= appName %>', [
 
@@ -15,8 +19,14 @@ var app = angular.module('<%= appName %>', [
 ]);
 
 // app components
-require('./filters')(app);
-require('./services')(app);
-require('./core')(app);
-require('./components')(app);
-require('./pages')(app);
+import core from './core';
+import services from './services';
+import components from './components';
+import filters from './filters';
+import pages from './pages';
+
+core(app);
+services(app);
+components(app);
+filters(app);
+pages(app);

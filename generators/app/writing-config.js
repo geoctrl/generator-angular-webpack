@@ -65,18 +65,30 @@ module.exports = function(self) {
 			self.destinationPath('app/core/index.js')
 	);
 
-	// app/core/app-config.js
+	// app/core/config.js
 	self.fs.copyTpl(
-			self.templatePath('app/core/app-config.js'),
-			self.destinationPath('app/core/app-config.js'), {
+			self.templatePath('app/core/config.js'),
+			self.destinationPath('app/core/config.js'), {
 				appName: _camelCase(self.props.appName)
 			}
 	);
 
-	// app/core/app-run.js
+	// app/core/run.js
 	self.fs.copyTpl(
-			self.templatePath('app/core/app-run.js'),
-			self.destinationPath('app/core/app-run.js')
+			self.templatePath('app/core/run.js'),
+			self.destinationPath('app/core/run.js')
+	);
+
+	// app/core/interceptors.js
+	self.fs.copyTpl(
+			self.templatePath('app/core/interceptors.js'),
+			self.destinationPath('app/core/interceptors.js')
+	);
+
+	// app/core/state.js
+	self.fs.copyTpl(
+			self.templatePath('app/core/state.js'),
+			self.destinationPath('app/core/state.js')
 	);
 
 	// app/filters/index.js
