@@ -44,6 +44,7 @@ var config = {
 			__PROD__: process.env.NODE_ENV === 'production'
 		}),
 		new HtmlWebpackPlugin({
+			hash: true,
 			template: 'app/index.ejs',
 			appMountId: '<%= appName %>',
 			baseHref: process.env.NODE_ENV === 'production' ? '<%= baseHref %>/' : '/'
