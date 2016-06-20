@@ -27,6 +27,7 @@ var Generator = yeoman.Base.extend({
 			'angular-local-storage',
 			'axios',
 			'path',
+			'es6-promise'
 		], {'save': true});
 
 		// install dev dependencies
