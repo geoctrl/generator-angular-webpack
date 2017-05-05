@@ -9,10 +9,6 @@ export default class {
 			throw new Error(`[state class] requires the controller $scope as the first argument`);
 		}
 
-		if (!this.__controller) {
-			throw new Error(`[state class] requires the controller lexical "this" as the second argument`);
-		}
-
 		// initialize state
 		this.__controller.state = {};
 	};

@@ -14,5 +14,5 @@
     "url": "<%= bitbucketUrl %>"
   },
   "author": "",
-  "license": "copyright"
+  "license": ""
 }
